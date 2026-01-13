@@ -1,0 +1,12 @@
+function calculate() {
+  let lastDate = new Date(document.getElementById("lastDate").value);
+  let cycle = parseInt(document.getElementById("cycle").value);
+
+  if (!lastDate) return;
+
+  let nextDate = new Date(lastDate);
+  nextDate.setDate(nextDate.getDate() + cycle);
+
+  document.getElementById("result").innerHTML =
+    "💗 Expected next period: <br><b>" + nextDate.toDateString() + "</b><br><br>Take care & rest 🫶";
+}
